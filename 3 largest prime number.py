@@ -10,9 +10,9 @@ def divides(n, i):
         returnValue = False
     return returnValue
 
-def isPrime(number):
-    for i in range(3, round(math.sqrt(number))+1,2):
-        if number%i == 0:
+def isPrime(number, primes):
+    for prime in primes:
+        if number%prime == 0:
             return False
     return True
 
@@ -21,11 +21,12 @@ n = 10000000
 
 start = time.time()
 print(start)
-primesList = []
+primesList = [2]
 for i in (range(3,n+1,2)):
-    if isPrime(i):
+    if isPrime(i, primesList):
         primesList.append(i)
 
 end = time.time()
-
 print(end - start)
+print(primesList)
+
