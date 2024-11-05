@@ -30,6 +30,7 @@
 
 totalDivisors = []
 total = 1
+#  loop through all the numbers between 1-20. for each number, see if its factors are in the list, if so, divide it by that number
 for i in range(2,21):
     for divisor in totalDivisors:
         if i%divisor == 0:
